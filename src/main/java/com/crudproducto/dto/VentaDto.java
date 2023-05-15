@@ -1,11 +1,15 @@
 package com.crudproducto.dto;
 
+ 
+
 public class VentaDto {
 	
 	 private Integer id;
 	private String nombre;
 	public Integer getId() {
 		return id;
+	}
+	public VentaDto() {
 	}
 	public void setId(Integer id) {
 		this.id = id;

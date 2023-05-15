@@ -1,17 +1,23 @@
 package com.crudproducto.servicio.impl;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+ 
+import java.io.ByteArrayOutputStream;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
+import org.apache.poi.ss.usermodel.Sheet;
 import com.crudproducto.dao.IProductoDao;
-import com.crudproducto.dao.VentaDTO;
 import com.crudproducto.dto.MensajeDto;
 import com.crudproducto.dto.ProductoDto;
 import com.crudproducto.dto.VentaDto;
@@ -100,7 +106,7 @@ public class ProductoService implements IProductoService {
 
 	@Override
 	public ResponseEntity<?> productSinEntity() {
-		 System.out.println("pure");
+	
 		return new ResponseEntity<>(dao.productSinEntity(), HttpStatus.OK);
 	}
 
@@ -116,4 +122,7 @@ public class ProductoService implements IProductoService {
 	        }
 	        return ventasDTO;
 	    }
+	  
+	  
+	  
 }

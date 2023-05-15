@@ -1,10 +1,13 @@
 package com.crudproducto.servicio;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
 import com.crudproducto.dto.ProductoDto;
+import com.crudproducto.dto.VentaDto;
 import com.crudproducto.dto.productDto;
 
 public interface IProductoService {
@@ -49,5 +52,5 @@ public interface IProductoService {
 	public ResponseEntity<?> insertProducto(ProductoDto dto);
 	
 	public ResponseEntity<?>productSinEntity( );
-
+ 
 }
